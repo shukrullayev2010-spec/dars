@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+    padding: 25px;
+}
+
+h1 {
+    color: black;
+}
+
+.parent {
+    width: 600px;
+    height: 650px;
+    border: 2px solid black;
+    background-color: aqua;
+    margin: 150px auto;
+}
+
+.child {
+    width: 100px;
+    height: 100px;
+    background-color: orangered;
+    border: 2px solid black;
+    margin: 5px;
+}
+
+.child:first-child {
+    background-color: gray;
+    width: 600px;
+
+}
+
+.child:nth-child(2) {
+    background-color: gold;
+    width: 500px;
+}
+
+.child:last-child {
+    background-color: blue;
+
+}
+
+.child:nth-child(3) {
+    background-color: antiquewhite;
+    width: 400px;
+}
+
+h1 {
+    padding-top: 50px;
+    text-align: center;
+}
+
+h1::before {
+    content: 'salom';
+    color: green;
+}
+
+h1::after {
+    content: 'keyin';
+    color: aqua;
+}
+
+
+.element {
+    position: relative;
+    width: 400px;
+    height: 500px;
+    border-radius: 16px;
+    background-color: rgb(48, 48, 48);
+    margin: 200px auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.element::before,
+.element::after{
+    content:'' ;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    padding: 25px;
+}
+
+.element::before {
+    z-index: 1;
+    background: linear-gradient(45deg,pink,aqua);
+}
+
+.element::after {
+    padding: 50px;
+    background: linear-gradient(45deg,pink,aqua);
+    filter: blur(50px);
+
+}
+
+
+.rang{
+    width: 600px;
+    height: 600px;
+    margin: 200px auto;
+    border-radius: 16px;
+
+    background: conic-gradient(skyblue,orange,yellow,red,skyblue);
+}
+
+.rang2{
+     width: 600px;
+    height: 600px;
+    margin: 200px auto;
+    border-radius: 16px;
+
+    background: radial-gradient(circle, rgb(255,89,0),yellow,rgb(1,1,56),black);
+}
+
+.switch{
+    position: relative;
+    width: 210px;
+    height: 110px;
+    appearance: none;
+    background-color: black;
+    border-radius: 60px;
+    display: flex;
+    align-items: center;
+    padding: 0px 5px;
+}
+
+.switch::before{
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border-radius: 50%;
+    background-color: red;
+    transition: 0.2s linear;
+    left: 5px;
+}
+
+.switch:checked::before{
+    left: calc(210px - 100px - 5px);
+    background-color: limegreen;
+}
