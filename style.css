@@ -149,3 +149,12 @@ h1::after {
     left: calc(210px - 100px - 5px);
     background-color: limegreen;
 }
+
+.class{
+    width: 600px;
+    height: 600px;
+    margin: 200px auto;
+    border-radius: 16px;
+
+    background: radial-gradient(circle, blue, aqua, lightblue, limegreen, yellow,blue);
+}
